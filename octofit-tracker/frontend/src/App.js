@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
@@ -10,9 +10,21 @@ import './App.css';
 
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('octofit-dark');
+      document.body.classList.remove('octofit-light');
+    } else {
+      document.body.classList.add('octofit-light');
+      document.body.classList.remove('octofit-dark');
+    }
+  }, [darkMode]);
+
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-dark">
+      <nav className={`navbar navbar-expand-lg ${darkMode ? 'navbar-dark' : 'navbar-light'}`}>
         <div className="container-fluid">
           <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
             <img src={process.env.PUBLIC_URL + '/octofitapp-small.png'} alt="OctoFit Logo" className="octofit-logo me-2" />
@@ -29,6 +41,13 @@ function App() {
               <li className="nav-item"><Link className="nav-link" to="/users">Users</Link></li>
               <li className="nav-item"><Link className="nav-link" to="/workouts">Workouts</Link></li>
             </ul>
+            <button
+              className={`btn btn-sm ms-3 ${darkMode ? 'btn-light' : 'btn-dark'}`}
+              onClick={() => setDarkMode((prev) => !prev)}
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? 'Light Mode' : 'Dark Mode'}
+            </button>
           </div>
         </div>
       </nav>
