@@ -1,0 +1,239 @@
+
+
+body.octofit-light {
+  background: linear-gradient(135deg, #f0f4f9 0%, #e0e7ef 100%);
+  min-height: 100vh;
+  color: #222;
+}
+body.octofit-dark {
+  background: linear-gradient(135deg, #181c24 0%, #23283a 100%);
+  min-height: 100vh;
+  color: #f0f4f9;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #0d6efd 0%, #6610f2 100%) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+body.octofit-dark .navbar {
+  background: linear-gradient(90deg, #23283a 0%, #181c24 100%) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 2rem;
+}
+body.octofit-dark .navbar-brand {
+  color: #ffd700 !important;
+}
+.navbar-nav .nav-link {
+  color: #e0e7ef !important;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  transition: color 0.2s;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+  color: #ffd700 !important;
+}
+body.octofit-dark .navbar-nav .nav-link {
+  color: #bfc8e6 !important;
+}
+body.octofit-dark .navbar-nav .nav-link.active, body.octofit-dark .navbar-nav .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+.octofit-logo {
+  height: 48px;
+  margin-right: 16px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.container {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 2rem 2rem 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+body.octofit-dark .container {
+  background: rgba(24,28,36,0.98);
+  color: #f0f4f9;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+body.octofit-dark .card {
+  background: #23283a;
+  color: #f0f4f9;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+.card-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.table {
+  background: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table thead.table-dark {
+  background: linear-gradient(90deg, #0d6efd 0%, #6610f2 100%);
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #e9ecef;
+}
+.table-hover tbody tr:hover {
+  background-color: #d6eaff;
+}
+body.octofit-dark table.table {
+  background: #23283a;
+  color: #f0f4f9;
+}
+body.octofit-dark .table thead.table-dark {
+  background: linear-gradient(90deg, #23283a 0%, #181c24 100%);
+  color: #ffd700;
+}
+body.octofit-dark .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #23283a;
+}
+body.octofit-dark .table-hover tbody tr:hover {
+  background-color: #343a50;
+}
+
+.btn-primary, .btn-outline-success, .btn-warning, .btn-dark, .btn-light {
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(13,110,253,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #0d6efd 0%, #6610f2 100%);
+  border: none;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #6610f2 0%, #0d6efd 100%);
+}
+.btn-outline-success {
+  color: #198754;
+  border-color: #198754;
+}
+.btn-outline-success:hover {
+  background: #198754;
+  color: #fff;
+}
+.btn-warning {
+  background: #ffd700;
+  color: #222;
+  border: none;
+}
+.btn-warning:hover {
+  background: #ffc107;
+  color: #222;
+}
+.btn-dark {
+  background: #23283a;
+  color: #ffd700;
+  border: none;
+}
+.btn-dark:hover {
+  background: #181c24;
+  color: #ffd700;
+}
+.btn-light {
+  background: #fff;
+  color: #23283a;
+  border: 1px solid #e0e7ef;
+}
+.btn-light:hover {
+  background: #f0f4f9;
+  color: #23283a;
+}
+body.octofit-dark .btn-primary {
+  background: linear-gradient(90deg, #343a50 0%, #23283a 100%);
+  color: #ffd700;
+}
+body.octofit-dark .btn-primary:hover {
+  background: linear-gradient(90deg, #23283a 0%, #343a50 100%);
+  color: #ffd700;
+}
+body.octofit-dark .btn-outline-success {
+  color: #ffd700;
+  border-color: #ffd700;
+}
+body.octofit-dark .btn-outline-success:hover {
+  background: #ffd700;
+  color: #23283a;
+}
+body.octofit-dark .btn-warning {
+  background: #ffd700;
+  color: #23283a;
+}
+body.octofit-dark .btn-warning:hover {
+  background: #ffc107;
+  color: #23283a;
+}
+body.octofit-dark .btn-dark {
+  background: #181c24;
+  color: #ffd700;
+}
+body.octofit-dark .btn-dark:hover {
+  background: #23283a;
+  color: #ffd700;
+}
+body.octofit-dark .btn-light {
+  background: #23283a;
+  color: #ffd700;
+  border: 1px solid #343a50;
+}
+body.octofit-dark .btn-light:hover {
+  background: #343a50;
+  color: #ffd700;
+}
+
+
+h1, h2, h3, h4, h5 {
+  color: #6610f2;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-weight: 700;
+}
+body.octofit-dark h1, body.octofit-dark h2, body.octofit-dark h3, body.octofit-dark h4, body.octofit-dark h5 {
+  color: #ffd700;
+}
+
+
+a, .App-link {
+  color: #0d6efd;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover, .App-link:hover {
+  color: #6610f2;
+}
+body.octofit-dark a, body.octofit-dark .App-link {
+  color: #ffd700;
+}
+body.octofit-dark a:hover, body.octofit-dark .App-link:hover {
+  color: #bfc8e6;
+}
+
+/* Custom animation for logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
