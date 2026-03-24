@@ -1,0 +1,55 @@
+import React, { useEffect, useState } from 'react';
+
+const Teams = () => {
+  const [teams, setTeams] = useState([]);
+  const codespace = process.env.REACT_APP_CODESPACE_NAME;
+  const apiUrl = codespace
+    ? `https://${codespace}-8000.app.github.dev/api/teams/`
+    : '/api/teams/';
+
+  useEffect(() => {
+    console.log('Fetching teams from:', apiUrl);
+    fetch(apiUrl)
+      .then(res => res.json())
+      .then(data => {
+        const results = data.results || data;
+        setTeams(results);
+        console.log('Fetched teams:', results);
+      })
+      .catch(err => console.error('Error fetching teams:', err));
+  }, [apiUrl]);
+
+  return (
+    <div className="container mt-4">
+      <div className="card shadow mb-4">
+        <div className="card-body">
+          <h2 className="card-title mb-4 text-info">Teams</h2>
+          {teams.length === 0 ? (
+            <div className="alert alert-info">No teams found.</div>
+          ) : (
+            <div className="table-responsive">
+              <table className="table table-striped table-hover align-middle">
+                <thead className="table-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Team Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {teams.map((team, idx) => (
+                    <tr key={idx}>
+                      <th scope="row">{idx + 1}</th>
+                      <td>{team.name}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Teams;
